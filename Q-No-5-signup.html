@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media and forms assignment Q.5</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+        }
+        h1{
+            color: rgb(251, 126, 222);
+            text-align: center;
+            font-size: 3em;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .inner-cont{
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 1px 1px 5px 3px rgb(230, 227, 227);
+            border-radius: 8px;
+        }
+        label{
+            display: block;
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        .rec-input{
+            width: 300px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        #gender{
+            margin-left: 10px;
+        }
+        .ag-checkbox{
+            display: flex;
+        }
+        .agree{
+            font-weight: 10;
+            font-size: 12px;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        button{
+            border: none;
+            width: 250px;
+            padding: 4px;
+            border-radius: 8px;
+            font-size: 20px;
+            background-color: rgb(251, 126, 222);
+            font-weight: bold;
+        }
+        button:hover{
+            background-color:  rgb(167, 79, 147);
+            color: white;
+        }
+        .signin-msg{
+            display: flex;
+            justify-content: center;
+        }
+        .signin{
+            color: rgb(251, 126, 222);
+        }
+        .signin:hover{
+            color:  rgb(167, 79, 147);
+        }
+        .terms-and-cond{
+            padding-left: 10px;
+            font-weight: 10;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Business name</h1>
+    <div class="container">
+        <div class="inner-cont">
+            <form action="registration/server" method="post" enctype="multipart/form-data" target="_blank">
+
+            <label for="first-name">First name</label>
+            <input type="text" name="first-name" id="first-name" placeholder="enter your first name" required minlength="3" max="30" class="rec-input">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" placeholder="enter your last name" required minlength="3" maxlength="30" class="rec-input">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="enter your email address" class="rec-input">
+
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" required placeholder="enter your current age" min="18" max="100" class="rec-input">
+
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="gender" required> Male 
+            <input type="radio" name="gender" id="gender" required> Female
+            <input type="radio" name="gender" id="gender" required> Other
+
+            <div class="ag-checkbox">
+            <label for="agree" class="agree">Agree to terms and conditions.</label>
+            <input type="checkbox" name="agree" id="agree" required>
+        </div>
+        <div class="terms-and-cond"><a href="#" class>Terms and Conditions</a></div>
+            <div class="btn"><button>Submit</button></div>
+            </form>
+        </div>
+
+    </div>
+    <p class="signin-msg">Already have an account. <a href="Q-No-5-signIn.html" class="signin">SignIn</a></p>
+</body>
+</html>
